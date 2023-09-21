@@ -14,13 +14,13 @@ public class IPPSController {
 	private IPPSService ippsService;
 
     // Mapping to get cities for state 
-	@RequestMapping("/ipps/{state}")
+	@RequestMapping("/{state}")
 	public List<location> getLocations(@PathVariable String state) {
 		return ippsService.findAllByState(state);
 	}
 	
 	// Get medpar objects according to city and state chosen
-	@RequestMapping("/ipps/{state}/{city}")
+	@RequestMapping("/{state}/{city}")
 	public List<medpar> getQuiz(@PathVariable String state, @PathVariable String city) {
 		return ippsService.findAllByStateAndCity(state, city);
 	}
