@@ -19,4 +19,7 @@ public class IPPSService {
 		return ippsRepository.findByStateAndCity(state, city);
 	}
 
+	public List<medpar> findAllAvailableLocations() {
+		return ippsRepository.findAll();
+	}
 }

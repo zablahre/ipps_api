@@ -10,6 +10,8 @@ public interface IPPSRepository extends CrudRepository<medpar, medpar.ippsId> {
 	
 	public List<location> findDistinctByState(String state);
 
+	public List<medpar> findAll();
+
 }
 
 interface location {

@@ -13,6 +13,11 @@ public class IPPSController {
 	@Autowired
 	private IPPSService ippsService;
 
+	@RequestMapping("/")
+	public List<medpar> getAllLocations() {
+		return ippsService.findAllAvailableLocations();
+	}
+
     // Mapping to get cities for state 
 	@RequestMapping("/{state}")
 	public List<location> getLocations(@PathVariable String state) {
